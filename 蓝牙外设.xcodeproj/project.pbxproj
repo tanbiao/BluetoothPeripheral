@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					A43241451F998FE3007E21C0 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = W8ZBWMZ89E;
 						ProvisioningStyle = Automatic;
 					};
 					A432415E1F998FE3007E21C0 = {
@@ -426,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W8ZBWMZ89E;
 				INFOPLIST_FILE = "蓝牙外设/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lewwei.----";
@@ -437,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W8ZBWMZ89E;
 				INFOPLIST_FILE = "蓝牙外设/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lewwei.----";

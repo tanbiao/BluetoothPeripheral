@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nPH-Td-m9L">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn7-5p-SQj">
+                                <rect key="frame" x="133" y="318.5" width="108" height="30"/>
+                                <state key="normal" title="给中心发送数据"/>
+                                <connections>
+                                    <action selector="sendData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vaR-WG-B0t"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="收到中心的的数据" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5B-9s-C2z">
+                                <rect key="frame" x="66" y="258" width="243" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="给蓝牙发送的数据" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qze-Ry-hS1">
+                                <rect key="frame" x="50" y="189" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff9-ho-RlL">
+                                <rect key="frame" x="95" y="381" width="184" height="30"/>
+                                <state key="normal" title="读取从蓝牙中心获取的数据"/>
+                                <connections>
+                                    <action selector="readData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dgc-Wl-PFV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ff9-ho-RlL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Oc-rk-Ecf"/>
+                            <constraint firstItem="b5B-9s-C2z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="CMl-rC-zu3"/>
+                            <constraint firstItem="fn7-5p-SQj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ISv-wU-Lmy"/>
+                            <constraint firstItem="b5B-9s-C2z" firstAttribute="top" secondItem="qze-Ry-hS1" secondAttribute="bottom" constant="39" id="KJT-lV-06e"/>
+                            <constraint firstItem="b5B-9s-C2z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OtZ-cm-Tal"/>
+                            <constraint firstItem="fn7-5p-SQj" firstAttribute="top" secondItem="b5B-9s-C2z" secondAttribute="bottom" constant="30.5" id="VGi-1B-KTW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b5B-9s-C2z" secondAttribute="trailing" constant="50" id="YAd-mI-qbT"/>
+                            <constraint firstItem="fn7-5p-SQj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gS5-J4-ALI"/>
+                            <constraint firstItem="qze-Ry-hS1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j6W-PX-FEo"/>
+                            <constraint firstItem="qze-Ry-hS1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="kDv-4I-Rvr"/>
+                            <constraint firstAttribute="trailing" secondItem="qze-Ry-hS1" secondAttribute="trailing" constant="50" id="qF7-WD-Xcn"/>
+                            <constraint firstItem="fn7-5p-SQj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="shb-VD-mTo"/>
+                            <constraint firstItem="ff9-ho-RlL" firstAttribute="top" secondItem="fn7-5p-SQj" secondAttribute="bottom" constant="32.5" id="y2c-LO-ihd"/>
+                            <constraint firstItem="fn7-5p-SQj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHi-LO-LbS"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="U7J-9b-TFA"/>
+                    <connections>
+                        <outlet property="readTextf" destination="b5B-9s-C2z" id="ldM-qF-km1"/>
+                        <outlet property="sendTextF" destination="qze-Ry-hS1" id="DFa-ST-Bmq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Hv-Fd-7mu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nPH-Td-m9L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nAi-2j-QeD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wtj-T2-UBu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S03-S8-Q2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="-559.07046476761627"/>
         </scene>
     </scenes>
 </document>
